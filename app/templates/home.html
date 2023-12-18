@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}Games market{% endblock title %}
+{% block content %}
+    {% for game in game_list %}
+        <div class = 'game'>
+            <h2 class=g_title>
+                <a href="{{game.get_absolute_url}}">{{game.title}}</a>
+            </h2>
+            <p class=price>Price : {{game.price}}$</p>
+            {% if game.picture %}
+                <a href="{{game.get_absolute_url}}"><img src="{{game.picture.url}}" alt="not found"></a>
+            {% endif %}
+            <h3 class=description>
+                Description :
+            </h3>
+            <p class=boeng_777_300_er>
+                {{game.description | truncatewords:20}}
+            </p>
+            <hr>
+        </div>
+    {% endfor %}
+
+
+
+
+{% endblock content %}

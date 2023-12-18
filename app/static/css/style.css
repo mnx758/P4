@@ -1,0 +1,201 @@
+@font-face {
+    font-family: 'Igletss';
+    src: url('../fonts/Iglets.ttf');
+}
+@font-face {
+    font-family: 'Cruinn';
+    src: url('../fonts/Cruinn\ Bold.ttf');
+}
+@font-face {
+    font-family: 'Calama';
+    src: url('../fonts/Calama_new.ttf');
+}
+@font-face {
+    font-family: 'CrBlack';
+    src: url('../fonts/Cruinn\ Black.ttf');
+}
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/Lato-Regular.ttf');
+}
+body{
+    margin-left: 20%;
+    margin-right: 20%;
+    background-color: #2D2B55;
+    display: grid;
+    margin-bottom: 0%;
+    place-content: center;
+}
+hr{
+    border-width: 3px;
+    border: solid;
+    border-radius: 3px;
+    border-color: #4D21FC;
+}
+.just{
+    font-family: Calama;
+    font-size:80px;
+    line-height: 90%;
+    font-weight: lighter;
+    letter-spacing: 3px;
+    color: #FB94FF;
+    padding-right: 90%;
+    margin-bottom: 1%;
+    margin-top: 0%;
+    display: inline;
+}
+.boeng_777_300er{
+    padding-right: 55%;
+}
+img{
+    float: left;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-style: solid;
+    border-color : #A599E9;
+    margin-right: 10px;
+}
+.g_title{
+    color :#dddbff;
+    font-family: Cruinn;
+    font-size: 40px;
+    display: block;
+    cursor: pointer;
+}
+.description{
+    display: inline;
+    margin-left: 20px;
+    padding-left: 30px;
+    color :#aaa6ff;
+    font-family: CrBlack;
+    font-size: 30px;
+}
+.boeng_777_300_er{
+    display: inline;
+    margin-left: 30px;
+    font-family: Lato;
+    padding-right: 10%;
+    font-size: 20px;
+    color: aliceblue;
+    display: flex;
+    padding-left: 30px;
+    margin-bottom: 90px;
+}
+.desc{
+    font-family: Lato;
+    padding : 0%;
+    color: rgba(232, 242, 250, 0.541);
+}
+.price{
+    font-family: Lato;
+    padding-right: 30%;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+}
+a{
+    color:aliceblue ;
+    text-decoration: none;
+}
+.game_title{
+    font-size: 80px;
+    color :#dddbff;
+    font-family: Cruinn;
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+.back{
+    font-size: 20px;
+    color :#dddbff;
+    font-family: Cruinn;
+    cursor: pointer;
+    --s: 3px;   
+    --c: #dddbff;
+    background: 
+    linear-gradient(90deg,var(--c) 50%,#000 0) calc(100% - var(--_p,0%))/200% 100%,
+    linear-gradient(var(--c) 0 0) 0% 100%/var(--_p,0%) var(--s) no-repeat;
+    -webkit-background-clip: text,padding-box;
+    background-clip: text,padding-box;
+    transition: 0.5s;
+}
+.back:hover{
+    --_p: 180px;
+}
+.bottom_bleh{
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: small;
+    font-family: Cruinn;
+    color: #454281;
+}
+.forms_storage input[type=submit]{
+    border-radius: 4px;
+    font-weight: bold;
+    padding: 5px 10px;
+    width:auto;
+    font-size: 20px;
+    background-color: #454281;
+    border: none;
+    color: #dddbff;
+}
+.forms_storage label{
+    display: block;
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #dddbff;
+}
+.forms_storage input,textarea{
+    margin-bottom: 10px;
+    border: none;
+    font-size: 15px;
+    padding: 5px 10px;
+    border-radius: 3px;
+    width: 30%;
+}
+.text_at_login_page{
+    font-size: 30px;
+    color: #dddbff;
+    margin-top: 5px;
+}
+.h1_login{ 
+    font-size: 30px;
+    color: #dddbff;
+}
+.login_or_logout{
+    font-family: Cruinn;
+    float: right;
+    text-align: right; 
+    font-size: 30px;
+    color: #dddbff;
+    top: -1%;
+    position: static;
+    margin-top: 10%;
+    margin-bottom: 0%;
+    display: block;
+}
+.login_or_logout a{
+    text-decoration: none;
+    
+}
+.helptext{
+    display: block;
+}
+.logout_button{
+    display: block;
+    font-size: 30px;
+    color: #dddbff;
+}
+.login_button{
+    display: block;
+    font-size: 30px;
+    color: #dddbff;
+}
+.signup_button{
+    display: block;
+    font-size: 30px;
+    color: #dddbff;
+}
+.password_change_class{
+    margin-top: 10px;
+}

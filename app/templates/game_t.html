@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}
+    {{game.title}}
+{% endblock title %}
+{% block content %}
+<div class = 'game'>
+    <h2 class=game_title>
+        {{game.title}}
+    </h2>
+    <p class=price>Price : {{game.price}}$</p>
+    {% if game.picture %}
+        <img class='picture' src="{{game.picture.url}}" alt="not found">
+    {% endif %}
+    <h3 class=description>
+        Description :
+    </h3>
+    <p class=boeng_777_300_er>
+        {{game.description}}
+    </p>
+    <p class=desc>
+        Game was added by : {{game.publisher}} at {{game.created_time}}
+    </p>
+    <p class=desc>
+        Last update was at : {{game.update_time}}
+    </p>
+</div>
+<a class='back' href='{% url "something" %}'>Вернутся на назад</a>
+{% endblock content %}
