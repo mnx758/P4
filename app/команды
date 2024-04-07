@@ -1,0 +1,6 @@
+git init - инициализация гита
+git remote add origin | url | - привязывает проект к репозиторию
+git add | name_file | - отслеживает файлы в репозитории
+git commit -m "| description |" - точка возрата
+git push origin master - заливает проект в репозиторий
+git rm --cached | name_file |

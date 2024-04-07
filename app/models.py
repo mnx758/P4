@@ -14,6 +14,7 @@ class Games(models.Model):
     created_time=models.DateTimeField(auto_now_add=True)
     update_time=models.DateTimeField(auto_now=True)
     picture = models.ImageField(verbose_name="picture",blank=True)
+    color = models.TextField(verbose_name="color")
     def get_absolute_url(self):
         return reverse("g_path", args=[self.slug])
     

@@ -18,6 +18,23 @@
     font-family: 'Lato';
     src: url('../fonts/Lato-Regular.ttf');
 }
+@keyframes bg_color{
+    0%{
+        background-color: #2d2b55;
+    }
+    25%{
+        background-color: #3c3a69;
+    }
+    50%{
+        background-color: #413f69;
+    }
+    75%{
+        background-color: #3c3a69;
+    }
+    100%{
+        background-color: #2d2b55;
+    }
+}
 body{
     margin-left: 20%;
     margin-right: 20%;
@@ -25,12 +42,15 @@ body{
     display: grid;
     margin-bottom: 0%;
     place-content: center;
+    animation-name: bg_color;
+    animation-duration: s;
+    animation-iteration-count: infinite;
 }
 hr{
     border-width: 3px;
-    border: solid;
+    border: solid rgba(145,104,219,1);
     border-radius: 3px;
-    border-color: #4D21FC;
+    /* border-color: linear-gradient(to right top, rgba(77,33,252,1) 0%, rgba(145,104,219,1) 100%) */
 }
 .just{
     font-family: Calama;
@@ -42,12 +62,17 @@ hr{
     padding-right: 90%;
     margin-bottom: 1%;
     margin-top: 0%;
-    display: inline;
+    display: inline-block;
+    transition: 0.5s;
+}
+.just:hover{
+    transform: scale(1.1) translatex(45px);
 }
 .boeng_777_300er{
     padding-right: 55%;
 }
 img{
+    display: inline-block;
     float: left;
     border-top-right-radius: 10px;
     border-bottom-left-radius: 10px;
@@ -57,12 +82,22 @@ img{
     border-color : #A599E9;
     margin-right: 10px;
 }
+.img_button{
+    transition: 90ms;
+}
+.img_button:hover{
+    transform: scale(1.03);
+}
 .g_title{
+    transition: 180ms;
     color :#dddbff;
     font-family: Cruinn;
     font-size: 40px;
     display: block;
     cursor: pointer;
+}
+.a_title:hover{
+    color: #9c97fd;
 }
 .description{
     display: inline;
@@ -97,6 +132,16 @@ img{
 a{
     color:aliceblue ;
     text-decoration: none;
+}
+.pidoras{
+    color : #9b96ff;
+    display: inline-block;
+    margin-left: 5%;
+    margin-bottom: 1%;
+}
+.huita{
+    display: inline-block;
+    margin-bottom: 1%;
 }
 .game_title{
     font-size: 80px;

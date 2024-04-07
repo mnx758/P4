@@ -1,0 +1,7 @@
+1 - django-admin startproject <projectname> .
+2 - python manage.py <commandname> - команды внутри проекта
+    2.1 - runserver - запускает сервер
+    2.2 - startapp <appname> - создает приложение внутри приложение 
+    2.3 - makemigrations - создает миграции
+    2.4 - migrate - применяет/запускает созданую миграцию
+    2.5 - createsuperuser - создает администратора

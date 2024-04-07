@@ -11,33 +11,6 @@
 </head>
 
 <body>
-    <div class=navigate>
-        <div class=login_or_logout>
-            {% if user.is_authenticated %}
-            <p>Welcome, {{user.username}}</p>
-            <a class='logout_button' href="{% url "logout" %}">
-                Log out of account
-            </a>
-            <p class='password_change_class'>
-                <a href="{% url "password_change" %}">
-                    Change password
-                </a>
-            </p>
-            {% else %}
-            <p>
-                <a class='logoin_button' href="{% url "login" %}">
-                    Login
-                </a>
-            </p>
-            <p>
-                <a class='singup_button' href="{% url "sign_up" %}">
-                    Sign Up
-                </a>
-            </p>
-            {% endif %}
-        </div>
-    </div>
-    <p class=just>JUST MARKET</p>
     {% block content %}{% endblock content %}
     <h3 class=bottom_bleh style="text-align: center">Все права не защищены и не облагаются авторским правом, делать дичь
         и т.д. - ОООЧЕНЬ рекомендуется</h3>
