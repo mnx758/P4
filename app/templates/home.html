@@ -9,7 +9,7 @@
             Log out of account
         </a>
         <p class='password_change_class'>
-            <a href="{% url "password_change" %}">
+            <a href="{% url "password_change" %}" class='password_change'>
                 Change password
             </a>
 
@@ -37,7 +37,7 @@
             </h2>
             <p class=price>Price : {{game.price}}$</p>
             {% if game.picture %}
-                <a href="{{game.get_absolute_url}}"><img class="img_button" src="{{game.picture.url}}" alt="not found"></a>
+                <a href="{{game.get_absolute_url}}"><div class=img_button_border_wrap><img class="img_button" src="{{game.picture.url}}" alt="not found"></div></a>
             {% endif %}
             <h3 class=description>
                 Description :

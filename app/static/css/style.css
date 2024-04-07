@@ -57,16 +57,17 @@ hr{
     font-size:80px;
     line-height: 90%;
     font-weight: lighter;
+    float: left;
     letter-spacing: 3px;
     color: #FB94FF;
-    padding-right: 90%;
     margin-bottom: 1%;
     margin-top: 0%;
     display: inline-block;
     transition: 0.5s;
+    width: 200px;
 }
 .just:hover{
-    transform: scale(1.1) translatex(45px);
+    transform: scale(1.1);
 }
 .boeng_777_300er{
     padding-right: 55%;
@@ -78,14 +79,26 @@ img{
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    border-style: solid;
-    border-color : #A599E9;
+    /* border-style: solid;
+    border-color : #A599E9; */
     margin-right: 10px;
+    box-sizing: border-box;
+    padding: 0;
 }
-.img_button{
+.img_button_border_wrap{
+    background: linear-gradient(45deg, #A599E9, #c1a4e2, #3b307a);
+    width: 470px;
+    height: 225px;
+    margin-right: 10px ;
+    display: inline-block;
+    float: left;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     transition: 90ms;
 }
-.img_button:hover{
+.img_button_border_wrap:hover{
     transform: scale(1.03);
 }
 .g_title{
@@ -93,8 +106,16 @@ img{
     color :#dddbff;
     font-family: Cruinn;
     font-size: 40px;
-    display: block;
+    display: inline-block;
+    margin-right: 10%;
     cursor: pointer;
+    transition-duration: 100ms;
+}
+.g_title:hover{
+    transform: scale(1.03);
+}
+.a_title{
+    /* kurwa */
 }
 .a_title:hover{
     color: #9c97fd;
@@ -108,7 +129,7 @@ img{
     font-size: 30px;
 }
 .boeng_777_300_er{
-    display: inline;
+    display: inline-block;
     margin-left: 30px;
     font-family: Lato;
     padding-right: 10%;
@@ -230,11 +251,21 @@ a{
     display: block;
     font-size: 30px;
     color: #dddbff;
+    transition-duration: 100ms;
+}
+.logout_button:hover{
+    color: #a991ff;
+    transform: scale(1.02);
 }
 .login_button{
     display: block;
     font-size: 30px;
     color: #dddbff;
+    transition-duration: 100ms;
+}
+.login_button:hover{
+    color: #a991ff;
+    transform: scale(1.02);
 }
 .signup_button{
     display: block;
@@ -243,4 +274,11 @@ a{
 }
 .password_change_class{
     margin-top: 10px;
+    transition-duration: 100ms;
+}
+.password_change_class:hover{
+    transform: scale(1.02);
+}
+.password_change:hover{
+    color: #a991ff;
 }
