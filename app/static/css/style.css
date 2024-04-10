@@ -18,6 +18,17 @@
     font-family: 'Lato';
     src: url('../fonts/Lato-Regular.ttf');
 }
+@keyframes gradient{
+    0%,100% {
+        background: linear-gradient(45deg, #A599E9, #c1a4e2, #3b307a);
+    }
+    50%{
+        background: linear-gradient(45deg, #3b307a, #c1a4e2, #A599E9);
+    }
+    25%,75%{
+        background: linear-gradient(45deg, #3b307a, #A599E9,#c1a4e2 );
+    }
+}
 @keyframes bg_color{
     0%{
         background-color: #2d2b55;
@@ -39,12 +50,15 @@ body{
     margin-left: 20%;
     margin-right: 20%;
     background-color: #2D2B55;
-    display: grid;
+    /* display: grid; */
+    /* display: inline-block; */
+    background-attachment:fixed;
     margin-bottom: 0%;
     place-content: center;
     animation-name: bg_color;
-    animation-duration: s;
+    animation-duration: 20s;
     animation-iteration-count: infinite;
+    overflow: auto;
 }
 hr{
     border-width: 3px;
@@ -54,10 +68,10 @@ hr{
 }
 .just{
     font-family: Calama;
-    font-size:80px;
+    font-size:95px;
     line-height: 90%;
     font-weight: lighter;
-    float: left;
+    /* float: left; */
     letter-spacing: 3px;
     color: #FB94FF;
     margin-bottom: 1%;
@@ -71,10 +85,26 @@ hr{
 }
 .boeng_777_300er{
     padding-right: 55%;
+    display: inline-block;
 }
+.navigate{
+    display: block;
+    padding-top: 5%;
+}
+.game-page{
+    /* display: grid; */
+
+}
+/* non-active-css{
+    display: flex;
+    width: 400px;
+}
+.active-css{
+
+} */
 img{
     display: inline-block;
-    float: left;
+    /* float: left; */
     border-top-right-radius: 10px;
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
@@ -86,6 +116,7 @@ img{
     padding: 0;
 }
 .img_button_border_wrap{
+    /* animation: gradient 10s infinite; */
     background: linear-gradient(45deg, #A599E9, #c1a4e2, #3b307a);
     width: 470px;
     height: 225px;
@@ -108,6 +139,8 @@ img{
     font-size: 40px;
     display: inline-block;
     margin-right: 10%;
+    padding-bottom: 0%;
+    margin-bottom: 5px;
     cursor: pointer;
     transition-duration: 100ms;
 }
@@ -119,6 +152,16 @@ img{
 }
 .a_title:hover{
     color: #9c97fd;
+}
+.ss{
+    width: 15px;
+    height: 15px;
+    border-radius: 3px;
+    transition-duration: 300ms;
+    overflow: auto;
+}
+.ss:hover{
+    transform: scale(6);
 }
 .description{
     display: inline;
@@ -148,6 +191,7 @@ img{
     font-family: Lato;
     padding-right: 30%;
     font-size: 20px;
+    margin-top: 10px;
     color: rgb(255, 255, 255);
 }
 a{
@@ -163,6 +207,16 @@ a{
 .huita{
     display: inline-block;
     margin-bottom: 1%;
+}
+.game{
+    /* display: grid; */
+    /* width: 892px; */
+    /* height:500px; */
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+.container{
+    display: block  ;
 }
 .game_title{
     font-size: 80px;
@@ -187,6 +241,14 @@ a{
 }
 .back:hover{
     --_p: 180px;
+}
+.bottom-container{
+    display: inline-block;
+    margin-left: 0%;
+    margin-right: 0%;
+    width: 100%;
+    /* background-color: #000; */
+    padding: 0%;
 }
 .bottom_bleh{
     margin-top: 40px;
@@ -236,9 +298,7 @@ a{
     color: #dddbff;
     top: -1%;
     position: static;
-    margin-top: 10%;
-    margin-bottom: 0%;
-    display: block;
+    display: inline-block;
 }
 .login_or_logout a{
     text-decoration: none;
@@ -267,10 +327,20 @@ a{
     color: #a991ff;
     transform: scale(1.02);
 }
-.signup_button{
+.singup_button{
     display: block;
     font-size: 30px;
     color: #dddbff;
+}
+.singup_button:hover{
+    color: #a991ff;
+}
+.si{
+    transition-duration: 100ms;
+}
+.si:hover{
+    transform: scale(1.02);
+    color: #a991ff;
 }
 .password_change_class{
     margin-top: 10px;

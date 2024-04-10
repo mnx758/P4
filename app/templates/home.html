@@ -2,6 +2,7 @@
 {% block title %}Games market{% endblock title %}
 {% block content %}
 <div class=navigate>
+    <a class=just href="http://127.0.0.1:8000/">JUST MARKET</a>
     <div class=login_or_logout>
         {% if user.is_authenticated %}
         <p class=huita>Welcome, <p class=pidoras>{{user.username}}</p></p>
@@ -12,16 +13,16 @@
             <a href="{% url "password_change" %}" class='password_change'>
                 Change password
             </a>
-
+        
             
         </p>
         {% else %}
         <p>
-            <a class='logoin_button' href="{% url "login" %}">
+            <a class='login_button' href="{% url "login" %}">
                 Login
             </a>
         </p>
-        <p>
+        <p class=si>
             <a class='singup_button' href="{% url "sign_up" %}">
                 Sign Up
             </a>
@@ -29,27 +30,29 @@
         {% endif %}
     </div>
 </div>
-<a class=just href="http://127.0.0.1:8000/">JUST MARKET</a>
-    {% for game in game_list %}
-        <div class = 'game'>
-            <h2 class=g_title>
-                <a class=a_title href="{{game.get_absolute_url}}">{{game.title}}</a>
-            </h2>
-            <p class=price>Price : {{game.price}}$</p>
-            {% if game.picture %}
-                <a href="{{game.get_absolute_url}}"><div class=img_button_border_wrap><img class="img_button" src="{{game.picture.url}}" alt="not found"></div></a>
-            {% endif %}
-            <h3 class=description>
-                Description :
-            </h3>
-            <p class=boeng_777_300_er>
-                {{game.description | truncatewords:20}}
-            </p>
-            <hr>
-        </div>
-    {% endfor %}
-
-
-
-
+<div class=container>
+    
+        {% for game in game_list %}
+            <div class = 'game'>
+                <div class=game-container-left>
+                    <h2 class=g_title>
+                        <a class=a_title href="{{game.get_absolute_url}}">{{game.title}}</a>
+                    </h2>
+                    <p class=price>Price : {{game.price}}$</p>
+                </div>
+                <div class=game-container-center>
+                    {% if game.picture %}
+                        <a href="{{game.get_absolute_url}}"><div class=img_button_border_wrap><img class="img_button" src="{{game.picture.url}}" alt="not found"></div></a>
+                    {% endif %}
+                    <h3 class=description>
+                        SYSTEM REQUIREMENTS :
+                    </h3>
+                    <p class=boeng_777_300_er>
+                        {{game.description}}
+                    </p>
+                    <hr>
+                </div>
+            </div>
+        {% endfor %}
+</div>
 {% endblock content %}

@@ -4,26 +4,33 @@
 {% endblock title %}
 {% block content %}
 <a class=just href="http://127.0.0.1:8000/">JUST MARKET</a>
-<div class = 'game'>
-    <h2 class=game_title>
-        {{game.title}}
-    </h2>
-    <p class=price>Price : {{game.price}}$</p>
-    {% if game.picture %}
-        <img class='picture' src="{{game.picture.url}}" alt="not found">
-    {% endif %}
-    <h3 class=description>
-        Description :
-    </h3>
-    <p class=boeng_777_300_er>
-        {{game.description}}
-    </p>
-    <p class=desc>
-        Game was added by : {{game.publisher}} at {{game.created_time}}
-    </p>
-    <p class=desc>
-        Last update was at : {{game.update_time}}
-    </p>
+<div class=game-page>
+    <div class = 'game'>
+        <div class=non-active-css>
+            <h2 class=game_title>
+                {{game.title}}
+            </h2>
+            <p class=price>Price : {{game.price}}$</p>
+            {% if game.picture %}
+                <img class='picture' src="{{game.picture.url}}" alt="not found">
+            {% endif %}
+        </div>
+        <div class=active-css>
+            <h3 class=description>
+                SYSTEM REQUIREMENTS :
+            </h3>
+            <p class=boeng_777_300_er>
+                {{game.description}}
+            </p>
+        </div>
+        <p class=desc>
+            Game was added by : {{game.publisher}} at {{game.created_time}}
+        </p>
+        <p class=desc>
+            Last update was at : {{game.update_time}}
+        </p>
+    </div>
 </div>
+
 <a class='back' href='{% url "something" %}'>Вернутся на назад</a>
 {% endblock content %}
